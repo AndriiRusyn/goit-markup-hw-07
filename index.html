@@ -16,10 +16,16 @@
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <!-- header section  -->
 
-    <header class="page-header">
-      <div class="container main-nav">
+
+
+
+    <!-- header section  -->
+  
+
+    <header class="page-header page-header-mobile">
+      <!-- took off main-nav from div class container   -->
+      <div class="container ">   
         <nav class="main-nav">
           <a
             href="./index.html"
@@ -38,38 +44,153 @@
               <a href="./contacts.html" class="menu-link link">Contacts</a>
             </li>
           </ul>
-        </nav>
 
-        <address class="contacts">
+<div class="contact-container">
+      <address class="contacts">
           <ul class="contact-info list">
             <li class="contact-item">
-              <a href="mailto:info@devstudio.com" class="link"
+              <a href="mailto:info@devstudio.com" class="mobile-item link"
                 >info@devstudio.com</a
               >
             </li>
             <li class="contact-item">
-              <a href="tel:+11(000)111-11-11" class="link"
+              <a href="tel:+11(000)111-11-11" class="phone-item link"
                 >+11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+ </div>
+
+          <!-- mobile modal menu and button css -->
+          
+          <button type="button" class="mobile-menu-open" data-mobile-close>
+          <svg class="mobile-menu-open__icon" width="32" height="22">
+          <use href="./images/icons.svg#hamburger">
+          </use>
+          </svg>
+
+          
+          </button>
+            <div class="mobile-menu" data-modal-block>
+              <div class="container mobile-menu__container">
+            <button class="mobile-menu__close-btn" data-mobile-open>
+            <svg class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-close-modal">
+            </use>
+            </svg>
+            </button>
+
+                        <div class="mobile-navigation">
+
+                            <ul class="mobile-menu-list list">
+                            <li class="mobile-menu-item">
+                              <a href="./index.html" class="mobile-link-item link">Studio</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                              <a href="./portfolio.html" class="mobile-link-item link">Portfolio</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                              <a href="./contacts.html" class="mobile-link-item link">Contacts</a>
+                            </li>
+                          </ul>
+
+
+                          <div class="mobile-contacts">
+
+                              <ul class="mobile-contact-info list">
+                              <li class="mobile-list">
+                                <a class="mobile-contact-tel link" href="tel:+11(000)111-11-11">+11 (000) 111-11-11</a></li>
+
+                              <li class="mobile-list">
+                                <a class="mobile-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                              </ul>
+                        
+                          <div class="mobile-icon-countainer">
+                          <ul class="mobile-icon-list">
+                          <li class="mobile-icon-li list">
+                          <a class="mobile-icons-link" href="#">
+                                <svg class="mobile-icons-team">
+                                    <use href="./images/icons.svg#icon-instagram"></use> 
+                                </svg>
+                           </a>
+                           </li>
+
+                        <li class="mobile-icon-li list">
+                        <a class="mobile-icons-link" href="#">
+                        <svg class="mobile-icons-team">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                          </svg>
+                          </a>
+                          </li>
+                          <li class="mobile-icon-li list">
+                          <a class="mobile-icons-link" href="#">
+                            <svg class="mobile-icons-team">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                          </svg>
+                          </a>
+                          </li>
+
+                        <li class="mobile-icon-li list">
+                        <a class="mobile-icons-link" href="https://www.linkedin.com">
+                          <svg class="mobile-icons-team">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                        </a>
+                        </li>
+                        </ul>
+                        
+                    </div>
+                    </div>
+            
+      </div>
+      </nav>
+
+
+
+<!-- mobile modal button and header stops here  -->
+
+
+
+ 
+    
+        
       </div>
     </header>
+<!-- end of header  -->
+
+
+
+
+
+
+
+
 
     <!-- here is main section hero with order button -->
 
-    <main>
+
+
+
+    <!-- <main>
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-btn" data-modal-open>Order Service</button>
         </div>
-      </section>
+      </section> -->
+
+
+
 
       <!-- here section advantages -->
 
-      <section class="section">
+
+
+
+
+
+      <!-- <section class="section">
         <div class="container">
           <h2 hidden class="visually-hidden">Advantages</h2>
           <ul class="list advantages">
@@ -128,10 +249,20 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
+
+
+
+
 
       <!-- here section of examples of work -->
-      <section class="section-examples">
+
+
+
+
+
+
+      <!-- <section class="section-examples">
         <div class="container">
           <h2 class="section-title">What Are We Doing</h2>
 
@@ -162,11 +293,21 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
+
+
+
+
+
 
       <!-- here starts section with team members -->
 
-      <section class="section team">
+
+
+
+
+
+      <!-- <section class="section team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="list our-team">
@@ -481,10 +622,21 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
+
+
+
+
+
+
 
     <!-- section footer is  starts here -->
-    <footer class="section-footer">
+
+
+
+
+
+    <!-- <footer class="section-footer">
       <div class="container footer-container">
         <div class="footer-container-one">
           <a
@@ -574,7 +726,12 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
+
+
+
+
+
 
     <!-- modal is here  -->
 
@@ -659,6 +816,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile.js"></script>
 <script src="./js/modal.js"></script>
   </body>
 </html>

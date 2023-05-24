@@ -73,9 +73,478 @@ img {
   overflow: hidden;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 396px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    max-width: 396px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+  }
+}
 
 
-/* header css */
+/* header css mobile  */
+
+@media screen and (max-width: 767px) {
+
+
+  .logo {
+  color: var(--Dark-NAVY-BLUE);
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  margin-right: 76px;
+  display: inline-block;
+  letter-spacing: 0.03em;
+}
+
+.accent {
+  color: var(--Primary-Brand-IRIS);
+}
+
+.site-nav {
+  display: none;
+}
+
+.contact-info {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.page-header-mobile   {
+   padding-top: 25.5px;
+   padding-bottom: 23.5px; 
+
+   border-top: none;
+  border-bottom: 1px solid var(--Accent-CORNFLOWER);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+}
+
+
+
+
+.mobile-menu-open {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  height: 22px;
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-height: 796px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--White-background-WHITE);
+
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0,5);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--White-background-WHITE);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  
+
+}
+
+.mobile-menu.hidden {
+ opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu__container {
+  position: relative;
+  padding-left: 35px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.mobile-menu__close-icon {
+  height: 8px;
+  width: 8px;
+}
+
+.mobile-navigation {
+
+  width: 100%;
+  height: 100%;
+  max-width: 428px;
+  max-height: 796px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 200px;
+  width: 151px;
+  margin-top: 0; 
+}
+
+.mobile-link-item {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+color: var(--Dark-NAVY-BLUE);
+display: flex;
+row-gap: 40px;
+flex-direction: column;
+}
+
+.mobile-link-item:hover,
+.mobile-list-item:focus {
+  color: var(--Pressed-State-OCEAN);
+}
+
+
+.mobile-contacts {
+margin-top: auto;
+}
+
+.mobile-contact-info {
+display: flex;
+flex-direction: column;
+gap: 40px;
+margin-bottom: 48px;
+margin-top: 284px;
+}
+
+.mobile-contact-tel {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+color: var(--Text-SLATE);
+text-decoration: none;
+
+}
+
+.mobile-contact-tel:hover,
+.mobile-contact-tel:focus {
+  color: var(--Primary-Brand-IRIS);
+}
+
+
+
+.mobile-contact-link:hover,
+.mobile-contact-link:focus {
+color: var(--Primary-Brand-IRIS)
+}
+
+.mobile-contact-link {
+  font-weight: 500;
+  font-size:20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: var(--Text-SLATE);
+}
+
+.mobile-icon-list {
+display: flex;
+flex-wrap: wrap;
+gap: 56px;
+padding-left: 0;
+}
+
+.mobile-icon-li {
+  height: 40px;
+  width: 40px;
+}
+
+.mobile-icons-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--Dark-NAVY-BLUE);
+  background-color: var(--Pressed-State-OCEAN);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: background-color var(--transition);
+}
+
+.mobile-icons-team {
+  fill: var(--White-background-WHITE);
+  height: 24px;
+  width: 24px;
+}
+
+
+@media only screen and (max-width: 428px) {
+  .mobile-icon-list {
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+}
+
+
+}
+
+
+
+
+/* tablet css  */
+
+@media screen and (min-width: 768px) {
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-open {
+  display: none;
+}
+
+.logo {
+  color: var(--Dark-NAVY-BLUE);
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  margin-right: 120px;
+  display: inline-block;
+  letter-spacing: 0.03em;
+}
+
+
+.accent {
+  color: var(--Primary-Brand-IRIS);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item {
+  margin-right: 40px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0;
+}
+
+.site-nav .link {
+  
+  display: block;
+  
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  
+  font-weight: 500;
+  text-decoration: none;
+
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--Dark-NAVY-BLUE);
+  transition: color var(--transition);
+ }
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--Pressed-State-OCEAN);
+}
+
+.site-nav .link.current {
+  color: var(--Pressed-State-OCEAN);
+}
+
+
+.current::after {
+  position: absolute;
+  content: '';
+  
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--Pressed-State-OCEAN);
+  bottom: -1px;
+  border-radius: 2px;
+  left: 0;
+}
+
+.menu-link {
+  position: relative;
+  display: block;
+  color: var(--Dark-NAVY-BLUE);
+  transition-property: color;
+  transition-duration: var(--transition);
+  transition-timing-function: var(--transition);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--Pressed-State-OCEAN);
+}
+
+.current {
+  color: var(--Pressed-State-OCEAN);
+}
+
+.contact-info .link:hover,
+.contact-info .link:focus {
+  color: var(--Pressed-State-OCEAN);
+}
+
+
+.contact-info .link {
+  color: var(--Dark-NAVY-BLUE);
+  transition: color var(--transition);
+  
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  font-style: normal;
+
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+  display: flex;
+  row-gap: 4px;
+}
+
+.contacts {
+  font-style: normal;
+  margin-left: auto;
+}
+
+.contact-info:last-child {
+  margin-right: 0;
+}
+
+
+.contact-container {
+  margin-left: auto;
+}
+
+
+.contact-info {
+  display: block;
+  gap: 40px;
+ }
+ 
+
+
+
+.page-header {
+  border-top: none;
+  border-bottom: 1px solid var(--Accent-CORNFLOWER);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.address-info {
+  color: var(--Text-SLATE);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.address-item {
+  display: flex;
+}
+
+
+.mobile-item {
+  padding: 0;
+}
+
+.phone-item {
+  padding: 0;
+}
+
+
+}
+
+ 
+
+
+
+
+
+/* header css desktop*/
+@media screen and (min-width: 1199px) {
+
+
 
 .logo {
   color: var(--Dark-NAVY-BLUE);
@@ -120,7 +589,6 @@ img {
 
 .site-nav {
   display: flex;
-  /* margin-left: 76px; */
 }
 
 .site-nav .item {
@@ -223,6 +691,7 @@ img {
   margin-right: 0;
 }
 .contact-info {
+  display: flex;
   gap: 40px;
 }
 
@@ -246,19 +715,6 @@ img {
   display: flex;
 }
 
-
-
-
-
-/* main container settings  */
-.container {
-  width: 1158px;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 /* style for the section hero */

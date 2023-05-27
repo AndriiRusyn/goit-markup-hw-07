@@ -985,11 +985,13 @@ padding-left: 0;
   flex-wrap: wrap;
   gap: 24px;
   border-radius: 0px 0px 4px 4px;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 767px) {
   .our-team {
     gap: 72px;
+    justify-content: center;
   }
 }
 
@@ -998,7 +1000,7 @@ padding-left: 0;
     row-gap: 64px;
   }
 }
-
+ 
 .socials {
     display: flex;
     justify-content: center;
@@ -1632,6 +1634,8 @@ transform: translate(0, 0);
 /* section customers  */
 
 
+
+
 .section-customers {
   color: var(--Dark-NAVY-BLUE);
   font-size: 36px;
@@ -1646,18 +1650,47 @@ transform: translate(0, 0);
 }
 
 .customers-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-
-    line-height: 1.15;
-    gap: 24px;
-
+  gap: 24px;
+  display: flex;
 }
 
+@media only screen and (max-width: 428px) {
+  .customers-list {
+    width: 100%;
+    max-width: 396px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .customers-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 72px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .customers-list {
+    flex-wrap: wrap;
+    max-width: 552px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .customers-list {
+    align-items: center;
+  }
+}
+
+
 .customer-icon {
-  width: calc((100% - 120px) / 6);
+  /* width: calc((100% - 120px) / 6);
+  height: 88px; */
   height: 88px;
+  max-width: 168px;
+  width: 100%;
+  flex-basis: calc((100% - 16px) / 2);
 }
 
 .icon-customer {
@@ -1691,6 +1724,50 @@ transform: translate(0, 0);
 
 
 /* footer css  */
+
+@media only screen and (min-width: 1199px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    background-color: var(--color-primary);
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .footer-container {
+    width: 319px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+    display: flex;
+    max-width: 768px;
+    width: 100%;
+    padding: 0 0 0 108px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .footer-container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 .socials-link-footer {
   width: 40px;
